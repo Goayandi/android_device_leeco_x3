@@ -72,11 +72,10 @@ BOARD_MKBOOTIMG_ARGS := \
 	--ramdisk_offset 0x03f88000 \
 	--second_offset 0x00e88000 \
 	--tags_offset 0x0df88000 \
-	--board WisniaPL
-#prebuilt
-TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
+	--board MT6795
+
 #source
-TARGET_KERNEL_SOURCE := kernel/LeTV/x500
+TARGET_KERNEL_SOURCE := kernel/LeEco/X3
 TARGET_KERNEL_CONFIG := x500_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
@@ -234,8 +233,8 @@ BOARD_BLUE_LED_PATH	:= "/sys/class/leds/blue"
 #export WITH_SU=true
 
 # Tethering
-PRODUCT_PROPERTY_OVERRIDES += \
-    net.tethering.noprovisioning=true
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    net.tethering.noprovisioning=true
 # faster Bootanimation
 TARGET_BOOTANIMATION_HALF_RES := true
 

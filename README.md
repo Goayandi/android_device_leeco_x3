@@ -1,7 +1,7 @@
 # Leeco 1s - XenonHD_OS_7.x
 ==============
 
-This branch is device for building of the LineageOS 14.1.
+This branch is device for building of the XenonHD_OS_7.x
 
 ---
 

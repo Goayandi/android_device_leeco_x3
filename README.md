@@ -1,4 +1,4 @@
-# Leeco 1s - LineageOS 14.1
+# Leeco 1s - Aokp_7.x
 ==============
 
 This branch is device for building of the Aokp_7.x

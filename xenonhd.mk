@@ -18,6 +18,11 @@ PRODUCT_MANUFACTURER := LeEco
 #Don't Ship SuperSU
 WITH_SUPERSU := false
 
+# 3rd party apps - choose which you want to build
+PRODUCT_PACKAGES += \
+    AdAway \
+    MiXplorer
+
 #Maintainer Name
 PRODUCT_PROPERTY_OVERRIDES += ro.xenonhd.maintainer="vishalk17"
 

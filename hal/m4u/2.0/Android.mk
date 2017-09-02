@@ -47,7 +47,7 @@ LC_MTK_PLATFORM := $(shell echo $(MTK_PLATFORM) | tr A-Z a-z )
 
 LOCAL_C_INCLUDES:= \
   $(TOP)/$(MTK_PATH_PLATFORM)/kernel/core/include/mach \
-  /m4u/mt6795 \
+  ../mt6795 \
 
 #
 ifeq ($(strip $(TARGET_BOARD_PLATFORM)),mt6735)

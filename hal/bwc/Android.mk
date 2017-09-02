@@ -69,8 +69,7 @@ LOCAL_SRC_FILES:= \
     $(COMMON_PATH)/BWCProfileAdapter.cpp
     
 
-LOCAL_C_INCLUDES:= \
-#/inc 
+LOCAL_C_INCLUDES:= \ 
   #$(TOP)/frameworks/base/include/ \
   #$(MTK_PATH_SOURCE)/hardware/bwc/inc \
   #$(TOP)/$(MTK_PATH_PLATFORM)/kernel/core/include/mach \

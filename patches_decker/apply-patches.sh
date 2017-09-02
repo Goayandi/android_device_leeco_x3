@@ -5,9 +5,6 @@ git apply -v ../../device/LeEco/X3/patches_decker/0001-Remove-CAP_SYS_NICE-from-
 git apply -v ../../device/LeEco/X3/patches_decker/0004-libnetutils-add-MTK-bits-ifc_ccmni_md_cfg.patch
 git apply -v ../../device/LeEco/X3/patches_decker/0012-PATCH-xen0n-some-MTK-services-e.g.-ril-daemon-mtk-re.patch
 cd ../..
-cd build/core
-git apply -v ../device/LeEco/X3/patches_decker/C_INCLUDES.patch
-cd ../..
 cd bionic
 git apply -v ../device/LeEco/X3/patches_decker/0002-Apply-LIBC-version-to-__pthread_gettid.patch
 cd ..

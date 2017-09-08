@@ -94,7 +94,9 @@
             64 - Volume rocker
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
-        
+    
+         <integer name="config_deviceHardwareKeys">83</integer>
+    
         <!-- Hardware keys present on the device with the ability to wake, stored as a bit field.
          This integer should equal the sum of the corresponding value for each
          of the following keys present:
@@ -229,6 +231,7 @@
  <bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool>
  <!-- If enabled, capacitive keys will only light up when user presses the keys.
  Otherwise, the buttons will light up whenever the user interacts with the device. -->
+ <add-resource type="bool" name="config_buttonLightOnKeypressOnly"></add-resource>
  <bool name="config_buttonLightOnKeypressOnly">true</bool>
 
 </resources>

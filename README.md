@@ -1,7 +1,7 @@
-# Leeco 1s - Lineage_15-8.x
+# Leeco 1s - XenonHD_7.x
 ==============
 
-This branch is device for building of the Lineage_15-8.x
+This branch is device for building of the XenonHD_7.x
 
 ---
 

@@ -2,7 +2,7 @@ How to apply patches.??????
 
 
 
-just head over this directory ; patches_decker
+just head over to this directory ; patches_decker
 
 then type in terminal
 

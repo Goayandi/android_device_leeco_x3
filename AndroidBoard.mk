@@ -1,8 +1,4 @@
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
-KERNEL_DEFCONFIG := x500-debug_defconfig
-else
 KERNEL_DEFCONFIG := x500_defconfig
-endif
 KERNEL_DIR := kernel/LeEco/X3
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-

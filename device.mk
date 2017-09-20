@@ -12,7 +12,7 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-3072-dalv
 # Call hwui memory config
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-3072-hwui-memory.mk)
 
-include device/vanzo/$(MTK_TARGET_PROJECT)/ProjectConfig.mk
+include device/LeEco/X3/ProjectConfig.mk
 
 # PRODUCT_COPY_FILES overwrite
 # Please add flavor project's PRODUCT_COPY_FILES here.

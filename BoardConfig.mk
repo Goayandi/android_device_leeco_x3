@@ -2,6 +2,8 @@
 
 LOCAL_PATH := device/LeEco/X3
 
+include device/LeEco/X3/mediatek/extra.mk
+
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
 MTK_K64_SUPPORT := yes

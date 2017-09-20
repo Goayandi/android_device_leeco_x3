@@ -1,4 +1,4 @@
--include vendor/LeEco/X3/BoardConfigVendor.mk
+#-include vendor/LeEco/X3/BoardConfigVendor.mk
 
 LOCAL_PATH := device/LeEco/X3
 

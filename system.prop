@@ -2,7 +2,7 @@
 # system.prop for LeEco Le 1s
 #
 # MTK, Infinity, 20090720 {
-wifi.interface=ap0
+wifi.interface=wlan0
 # MTK, Infinity, 20090720 }
 
 # MTK, mtk03034, 20101210 {

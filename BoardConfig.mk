@@ -1,5 +1,3 @@
-#-include vendor/LeEco/X3/BoardConfigVendor.mk
-
 LOCAL_PATH := device/LeEco/X3
 
 include device/LeEco/X3/mediatek/extra.mk

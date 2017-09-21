@@ -63,14 +63,14 @@
     <bool name="config_hotswapCapable">true</bool>
 
     <!-- If this is true, the screen will come on when you plug/unplug usb/power/whatever. -->
-    <bool name="config_unplugTurnsOnScreen">true</bool>    
+    <bool name="config_unplugTurnsOnScreen">true</bool>
 
     <string-array name="config_tether_usb_regexs">
-        <item>rndis\\d</item>
+        <item>"rndis\\d"</item>
     </string-array>
 
     <string-array name="config_tether_wifi_regexs">
-        <item>ap\\d</item>
+        <item>"wlan0"</item>
     </string-array>
 
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
@@ -95,20 +95,6 @@
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
     <integer name="config_deviceHardwareKeys">83</integer>
-    
-        <!-- Hardware keys present on the device with the ability to wake, stored as a bit field.
-         This integer should equal the sum of the corresponding value for each
-         of the following keys present:
-             1 - Home
-             2 - Back
-             4 - Menu
-             8 - Assistant (search)
-            16 - App switch
-            32 - Camera
-            64 - Volume rocker
-         For example, a device with Home, Back and Menu keys would set this
-         config to 7. -->
-    <integer name="config_deviceHardwareWakeKeys">64</integer>
 
     <!-- Indicate whether closing the lid causes the device to go to sleep and opening
          it causes the device to wake up.
@@ -188,7 +174,7 @@
     <bool name="config_enableAutoPowerModes">true</bool>
 
     <!-- Control whether Night display is available. -->
-    <bool name="config_nightDisplayAvailable">true</bool>
+    <bool name="config_nightDisplayAvailable">false</bool>
 
     <bool name="config_supportDoubleTapWake">false</bool>
     <bool name="config_networkSamplingWakesDevice">false</bool>
@@ -225,18 +211,6 @@
          backlight values for LUX levels between these control points.
          Must be overridden in platform specific overlays -->
 
-    <bool name="config_enableWifiDisplay">true</bool>
-
-    <!-- Doze: should the proximity sensor (handwave / pocket mode) be used as a pulse signal. -->
-    <bool name="config_dozePulseProximity">true</bool>
-
-    <!-- Use round icons -->
-    <bool name="config_useRoundIcon">true</bool>
-
-    <!-- Is the device capable of fingerprint actions -->
-    <bool name="config_fingerprintActions">true</bool>
-
-    <!-- Enable system navigation keys. -->
-    <bool name="config_supportSystemNavigationKeys">true</bool>
+ <bool name="config_enableWifiDisplay">true</bool>
 
 </resources>

@@ -5,12 +5,12 @@ TARGET_SCREEN_HEIGHT := 1920
 # Inherit device configuration
 $(call inherit-product, device/LeEco/X3/full_X3.mk)
 
-# Inherit some common XenonHD stuff.
-$(call inherit-product, vendor/xenonhd/config/common_full_phone.mk)
+# Inherit some common lineage stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := X3
-PRODUCT_NAME := xenonhd_X3
+PRODUCT_NAME := lineage_X3
 PRODUCT_BRAND := LeEco
 PRODUCT_MODEL := LeEco Le 1s
 PRODUCT_MANUFACTURER := LeEco
@@ -19,7 +19,7 @@ PRODUCT_MANUFACTURER := LeEco
 WITH_SUPERSU := false
 
 #Maintainer Name
-PRODUCT_PROPERTY_OVERRIDES += ro.xenonhd.maintainer="vishalk17"
+#PRODUCT_PROPERTY_OVERRIDES += ro.lineage.maintainer="vishalk17"
 
 # Release name
 PRODUCT_RELEASE_NAME := X3

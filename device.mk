@@ -56,6 +56,8 @@ PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.adb.secure=1
+    ro.secure=1
     ro.allow.mock.location=0 \
     ro.debuggable=0 \
     ro.zygote=zygote64_32 \
@@ -121,10 +123,10 @@ libext2_blkid \
 PRODUCT_TAGS += dalvik.gc.type-precise
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 # Var patch
-ifneq ($(TARGET_BUILD_VARIANT),user,userdebug,eng)
-  ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
-  ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=1
-endif
+#ifneq ($(TARGET_BUILD_VARIANT),user,userdebug,eng)
+# ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
+#  ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=1
+#endif
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ramdisk/enableswap.sh:root/enableswap.sh \

@@ -1,3 +1,7 @@
+dont apply this shit on oreo.and this file is for my personal work from now
+
+
+
 #!/bin/bash
 cd ../../../..
 cd system/core
@@ -22,8 +26,16 @@ git apply -v ../../device/LeEco/X3/patches_decker/0008-Partial-Revert-Camera1-AP
 git apply -v ../../device/LeEco/X3/patches_decker/0009-add-mtk-color-format-support.patch
 cd ../..
 cd system/netd
-git apply -v ../../device/LeEco/X3/patches_decker/0010-wifi-tethering-fix.patch
+#git apply -v ../../device/LeEco/X3/patches_decker/0010-wifi-tethering-fix.patch
 cd ../..
 cd frameworks/base
 #git apply -v ../../device/LeEco/X3/patches_decker/0013-PackageManager-don-t-delete-data-app-mcRegistry-fold.patch
 cd ../..
+
+
+
+what is missing from this :
+
+camera mode need to be include...
+netd patch
+mc registary patch

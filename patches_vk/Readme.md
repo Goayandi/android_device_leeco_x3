@@ -6,7 +6,7 @@ just head over to this directory ; patches_vk
 
 In terminal 
 
-type below commond and hit enter 
+type below command and hit enter 
 
 sh patches_vk.sh
 

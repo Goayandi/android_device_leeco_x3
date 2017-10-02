@@ -1,15 +1,14 @@
-commit 28d0f5f87896b8389895a80430220dd27901c97c
+commit a230032407edaa9483563580b7acd338d3cfe5ae
 Author: vishalk17 <vishalkapadi95@gmail.com>
-Date:   Mon Oct 2 07:01:18 2017 +0000
-Subject: 
-    add atomic.c
-Change-Id: I724e34adfb8f5bae6a6cdcbb8f053447ba7ba487
+Date:   Mon Oct 2 07:25:55 2017 +0000
+Subject: add atomic.c
+Change-Id: I5a9adedf66fabb088aa05012383e10af6a6a7fda
 
-diff --git a/libcutils/atomic.c b/libcutils/atomic.c
+diff --git a/libutils/atomic.c b/libutils/atomic.c
 new file mode 100644
 index 000000000..d34aa0081
 --- /dev/null
-+++ b/libcutils/atomic.c
++++ b/libutils/atomic.c
 @@ -0,0 +1,26 @@
 +/*
 + * Copyright (C) 2007 The Android Open Source Project

@@ -1,24 +1,19 @@
-From e54473736775ce2f5397507124a95cfe21435fbb Mon Sep 17 00:00:00 2001
-From: Mister Oyster <oysterized@gmail.com>
-Date: Sun, 2 Jul 2017 18:30:07 +0200
-Subject: [PATCH] build: core: add BOARD_USES_MTK_HARDWARE
-
-Change-Id: I004d75d34b526f997960fb3eb0566ca8401aab65
----
- core/soong_config.mk | 1 +
- 1 file changed, 1 insertion(+)
+commit: 2df70cdc08b157b55a8a28d1825d256ceb15fe92
+Author: vishalk17 <vishalkapadi95@gmail.com>
+Date:   Mon Oct 2 05:12:15 2017 +0000
+Subject:   [PATCH] build: core: add BOARD_USES_MTK_HARDWARE
+Change-Id: If6a8563d0fa6e4f60c40a87c71772c39d7677d09
 
 diff --git a/core/soong_config.mk b/core/soong_config.mk
-index 9cda3b109..e62e69366 100644
+index 60e444b52..d6338b7d0 100644
 --- a/core/soong_config.mk
 +++ b/core/soong_config.mk
-@@ -46,6 +46,7 @@ $(SOONG_VARIABLES): FORCE
- 	echo '    "Binder32bit": $(if $(BINDER32BIT),true,false),'; \
- 	echo '    "DevicePrefer32BitExecutables": $(if $(filter true,$(TARGET_PREFER_32_BIT_EXECUTABLES)),true,false),'; \
- 	echo '    "UseGoma": $(if $(filter-out false,$(USE_GOMA)),true,false),'; \
-+	echo '    "Mtk_hardware": $(if $(filter true,$(BOARD_USES_MTK_HARDWARE)),true,false),'; \
- 	echo '    "Debuggable": $(if $(filter userdebug eng,$(TARGET_BUILD_VARIANT)),true,false),'; \
- 	echo '    "Eng": $(if $(filter eng,$(TARGET_BUILD_VARIANT)),true,false),'; \
- 	echo '    "VendorPath": "$(TARGET_COPY_OUT_VENDOR)",'; \
--- 
-2.11.0
+@@ -32,6 +32,7 @@ $(SOONG_VARIABLES): FORCE lineage_soong
+        echo '    "HostStaticBinaries": $(if $(strip $(BUILD_HOST_static)),true,false),'; \
+        echo '    "Binder32bit": $(if $(BINDER32BIT),true,false),'; \
+        echo '    "DevicePrefer32BitExecutables": $(if $(filter true,$(TARGET_PREFER_32_BIT_EXECUTABLES)),true,fa
+lse),'; \
++       echo '    "Mtk_hardware": $(if $(filter true,$(BOARD_USES_MTK_HARDWARE)),true,false),'; \
+        echo '    "UseGoma": $(if $(filter-out false,$(USE_GOMA)),true,false),'; \
+        echo '    "Debuggable": $(if $(filter userdebug eng,$(TARGET_BUILD_VARIANT)),true,false),'; \
+        echo '    "Eng": $(if $(filter eng,$(TARGET_BUILD_VARIANT)),true,false),'; \

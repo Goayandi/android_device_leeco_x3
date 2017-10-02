@@ -11,8 +11,7 @@ index 60e444b52..d6338b7d0 100644
 @@ -32,6 +32,7 @@ $(SOONG_VARIABLES): FORCE lineage_soong
         echo '    "HostStaticBinaries": $(if $(strip $(BUILD_HOST_static)),true,false),'; \
         echo '    "Binder32bit": $(if $(BINDER32BIT),true,false),'; \
-        echo '    "DevicePrefer32BitExecutables": $(if $(filter true,$(TARGET_PREFER_32_BIT_EXECUTABLES)),true,fa
-lse),'; \
+        echo '    "DevicePrefer32BitExecutables": $(if $(filter true,$(TARGET_PREFER_32_BIT_EXECUTABLES)),true,false),'; \
 +       echo '    "Mtk_hardware": $(if $(filter true,$(BOARD_USES_MTK_HARDWARE)),true,false),'; \
         echo '    "UseGoma": $(if $(filter-out false,$(USE_GOMA)),true,false),'; \
         echo '    "Debuggable": $(if $(filter userdebug eng,$(TARGET_BUILD_VARIANT)),true,false),'; \

@@ -29,18 +29,7 @@ index 1da335030..f901b10eb 100644
  extern std::string default_console;
  extern struct selabel_handle *sehandle;
  extern struct selabel_handle *sehandle_prop;
-diff --git a/libcutils/Android.bp b/libcutils/Android.bp
-index 513736d62..6ebff2627 100644
---- a/libcutils/Android.bp
-+++ b/libcutils/Android.bp
-@@ -53,6 +53,7 @@ cc_library {
-     vendor_available: true,
-     host_supported: true,
-     srcs: [
-+        "atomic.c",
-         "config_utils.c",
-         "fs_config.c",
-         "canned_fs_config.c",
+
 diff --git a/libcutils/fs_config.c b/libcutils/fs_config.c
 index 5b9d17429..3b0ec25ab 100644
 --- a/libcutils/fs_config.c

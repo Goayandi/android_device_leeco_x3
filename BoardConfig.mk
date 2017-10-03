@@ -81,7 +81,7 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 
 # build old-style zip files (required for ota updater)
-#BLOCK_BASED_OTA := false
+BLOCK_BASED_OTA := false
 
 # Disable memcpy opt (for audio libraries)
 TARGET_CPU_MEMCPY_OPT_DISABLE := true

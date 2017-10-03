@@ -29,7 +29,7 @@ PRODUCT_AAPT_CONFIG := normal xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Recovery allowed devices
-TARGET_OTA_ASSERT_DEVICE := x3,X500,X507,X509,X3,x500,x507,x509,X502,x502
+TARGET_OTA_ASSERT_DEVICE := X3
 
 # Power
 PRODUCT_PACKAGES += \
@@ -318,6 +318,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libm4u  \
     libbwc   
+    
+ #Fingerprint HAL
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1-service
 
 # Include explicitly to work around Facelock issues
 PRODUCT_PACKAGES += libprotobuf-cpp-full

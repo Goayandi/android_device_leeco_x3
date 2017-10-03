@@ -29,7 +29,7 @@ PRODUCT_AAPT_CONFIG := normal xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Recovery allowed devices
-TARGET_OTA_ASSERT_DEVICE := x3,X500,X507,X509,X3,x500,x507,x509,X502,x502
+#TARGET_OTA_ASSERT_DEVICE := x3,X500,X507,X509,X3,x500,x507,x509,X502,x502
 
 # Power
 PRODUCT_PACKAGES += \
@@ -56,10 +56,10 @@ PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.adb.secure=1
-    ro.secure=1
+    ro.adb.secure=0
+    ro.secure=0
     ro.allow.mock.location=0 \
-    ro.debuggable=0 \
+    ro.debuggable=1 \
     ro.zygote=zygote64_32 \
     dalvik.vm.dex2oat-Xms=64m \
     dalvik.vm.dex2oat-Xmx=64m \
@@ -116,7 +116,7 @@ PRODUCT_PACKAGES += \
     resize2fs \
     setup_fs \
     ext4_resize \
-libext2_blkid \
+    libext2_blkid \
     libext2_uuid_static  \
     superumount 
     
@@ -303,10 +303,8 @@ PRODUCT_PACKAGES += \
     fs_config_files
     
 PRODUCT_PACKAGES += \
-    EngineerMode  \
     libm4u  \
-    libbwc  \
-ResurrectionOTA 
+    libbwc  
 
 # Include explicitly to work around Facelock issues
 PRODUCT_PACKAGES += libprotobuf-cpp-full

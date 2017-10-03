@@ -1,3 +1,1 @@
-for var in eng user userdebug; do
-add_lunch_combo lineage_X3-$var
-done
+add_lunch_combo lineage_X3-userdebug

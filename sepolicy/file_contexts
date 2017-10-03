@@ -1,3 +1,323 @@
+#line 1 "external/sepolicy/file_contexts"
+###########################################
+# Root
+/			u:object_r:rootfs:s0
+
+# Data files
+/adb_keys		u:object_r:adb_keys_file:s0
+/default\.prop		u:object_r:rootfs:s0
+/fstab\..*		u:object_r:rootfs:s0
+/init\..*		u:object_r:rootfs:s0
+/res(/.*)?		u:object_r:rootfs:s0
+/ueventd\..*		u:object_r:rootfs:s0
+
+# Executables
+/charger		u:object_r:rootfs:s0
+/init			u:object_r:init_exec:s0
+/sbin(/.*)?		u:object_r:rootfs:s0
+
+# Empty directories
+/lost\+found		u:object_r:rootfs:s0
+/proc			u:object_r:rootfs:s0
+
+# SELinux policy files
+/file_contexts		u:object_r:rootfs:s0
+/property_contexts	u:object_r:rootfs:s0
+/seapp_contexts		u:object_r:rootfs:s0
+/sepolicy		u:object_r:rootfs:s0
+
+##########################
+# Devices
+#
+/dev(/.*)?		u:object_r:device:s0
+/dev/akm8973.*		u:object_r:sensors_device:s0
+/dev/accelerometer	u:object_r:sensors_device:s0
+/dev/adf[0-9]*		u:object_r:graphics_device:s0
+/dev/adf-interface[0-9]*\.[0-9]*	u:object_r:graphics_device:s0
+/dev/adf-overlay-engine[0-9]*\.[0-9]*	u:object_r:graphics_device:s0
+/dev/alarm		u:object_r:alarm_device:s0
+/dev/android_adb.*	u:object_r:adb_device:s0
+/dev/ashmem		u:object_r:ashmem_device:s0
+/dev/audio.*		u:object_r:audio_device:s0
+/dev/binder		u:object_r:binder_device:s0
+/dev/block(/.*)?	u:object_r:block_device:s0
+/dev/block/dm-[0-9]+	u:object_r:dm_device:s0
+/dev/block/loop[0-9]*	u:object_r:loop_device:s0
+/dev/block/vold/.+	u:object_r:vold_device:s0
+/dev/block/ram[0-9]*	u:object_r:ram_device:s0
+/dev/bus/usb(.*)?       u:object_r:usb_device:s0
+/dev/cam		u:object_r:camera_device:s0
+/dev/console		u:object_r:console_device:s0
+/dev/cpuctl(/.*)?	u:object_r:cpuctl_device:s0
+/dev/device-mapper	u:object_r:dm_device:s0
+/dev/eac		u:object_r:audio_device:s0
+/dev/fscklogs(/.*)?	u:object_r:fscklogs:s0
+/dev/full		u:object_r:full_device:s0
+/dev/fuse		u:object_r:fuse_device:s0
+/dev/graphics(/.*)?	u:object_r:graphics_device:s0
+/dev/hw_random		u:object_r:hw_random_device:s0
+/dev/input(/.*)		u:object_r:input_device:s0
+/dev/iio:device[0-9]+   u:object_r:iio_device:s0
+/dev/ion		u:object_r:ion_device:s0
+/dev/kmem		u:object_r:kmem_device:s0
+/dev/log(/.*)?		u:object_r:log_device:s0
+/dev/mem		u:object_r:kmem_device:s0
+/dev/modem.*		u:object_r:radio_device:s0
+/dev/mpu		u:object_r:gps_device:s0
+/dev/mpuirq		u:object_r:gps_device:s0
+/dev/mtd(/.*)?		u:object_r:mtd_device:s0
+/dev/mtp_usb		u:object_r:mtp_device:s0
+/dev/pmsg0		u:object_r:pmsg_device:s0
+/dev/pn544		u:object_r:nfc_device:s0
+/dev/ppp		u:object_r:ppp_device:s0
+/dev/ptmx		u:object_r:ptmx_device:s0
+/dev/pvrsrvkm		u:object_r:gpu_device:s0
+/dev/kmsg		u:object_r:kmsg_device:s0
+/dev/null		u:object_r:null_device:s0
+/dev/nvhdcp1		u:object_r:video_device:s0
+/dev/random		u:object_r:random_device:s0
+/dev/rpmsg-omx[0-9]	u:object_r:rpmsg_device:s0
+/dev/rproc_user	u:object_r:rpmsg_device:s0
+/dev/rtc[0-9]      u:object_r:rtc_device:s0
+/dev/snd(/.*)?		u:object_r:audio_device:s0
+/dev/socket(/.*)?	u:object_r:socket_device:s0
+/dev/socket/adbd	u:object_r:adbd_socket:s0
+/dev/socket/sap_uim_socket[0-9]        u:object_r:sap_uim_socket:s0
+/dev/socket/cryptd	u:object_r:vold_socket:s0
+/dev/socket/dnsproxyd	u:object_r:dnsproxyd_socket:s0
+/dev/socket/dumpstate	u:object_r:dumpstate_socket:s0
+/dev/socket/fwmarkd	u:object_r:fwmarkd_socket:s0
+/dev/socket/gps		u:object_r:gps_socket:s0
+/dev/socket/installd	u:object_r:installd_socket:s0
+/dev/socket/lmkd        u:object_r:lmkd_socket:s0
+/dev/socket/logd	u:object_r:logd_socket:s0
+/dev/socket/logdr	u:object_r:logdr_socket:s0
+/dev/socket/logdw	u:object_r:logdw_socket:s0
+/dev/socket/mdns	u:object_r:mdns_socket:s0
+/dev/socket/mdnsd	u:object_r:mdnsd_socket:s0
+/dev/socket/mtpd	u:object_r:mtpd_socket:s0
+/dev/socket/netd	u:object_r:netd_socket:s0
+/dev/socket/property_service	u:object_r:property_socket:s0
+/dev/socket/racoon	u:object_r:racoon_socket:s0
+/dev/socket/rild	u:object_r:rild_socket:s0
+/dev/socket/rild-debug	u:object_r:rild_debug_socket:s0
+/dev/socket/vold	u:object_r:vold_socket:s0
+/dev/socket/wpa_eth[0-9] u:object_r:wpa_socket:s0
+/dev/socket/wpa_wlan[0-9] u:object_r:wpa_socket:s0
+/dev/socket/zygote	u:object_r:zygote_socket:s0
+/dev/socket/zygote_secondary	u:object_r:zygote_socket:s0
+/dev/spdif_out.*	u:object_r:audio_device:s0
+/dev/tegra.*		u:object_r:video_device:s0
+/dev/tf_driver		u:object_r:tee_device:s0
+/dev/tty		u:object_r:owntty_device:s0
+/dev/tty[0-9]*		u:object_r:tty_device:s0
+/dev/ttyS[0-9]*		u:object_r:serial_device:s0
+/dev/tun		u:object_r:tun_device:s0
+/dev/uhid		u:object_r:uhid_device:s0
+/dev/uinput		u:object_r:uhid_device:s0
+/dev/uio[0-9]*		u:object_r:uio_device:s0
+/dev/urandom		u:object_r:urandom_device:s0
+/dev/usb_accessory	u:object_r:usbaccessory_device:s0
+/dev/vcs[0-9a-z]*	u:object_r:vcs_device:s0
+/dev/video[0-9]*	u:object_r:video_device:s0
+/dev/watchdog		u:object_r:watchdog_device:s0
+/dev/xt_qtaguid	u:object_r:qtaguid_device:s0
+/dev/zero		u:object_r:zero_device:s0
+/dev/__kmsg__		u:object_r:klog_device:s0
+/dev/__properties__ u:object_r:properties_device:s0
+#############################
+# System files
+#
+/system(/.*)?		u:object_r:system_file:s0
+/system/bin/e2fsck	--	u:object_r:fsck_exec:s0
+/system/bin/fsck\.f2fs	--	u:object_r:fsck_exec:s0
+/system/bin/fsck_msdos	--	u:object_r:fsck_exec:s0
+/system/bin/toolbox	--	u:object_r:toolbox_exec:s0
+/system/bin/toybox	--	u:object_r:toolbox_exec:s0
+/system/bin/logcat	--	u:object_r:logcat_exec:s0
+/system/bin/sh		--	u:object_r:shell_exec:s0
+/system/bin/run-as	--	u:object_r:runas_exec:s0
+/system/bin/bootanimation u:object_r:bootanim_exec:s0
+/system/bin/app_process32	u:object_r:zygote_exec:s0
+/system/bin/app_process64	u:object_r:zygote_exec:s0
+/system/bin/servicemanager	u:object_r:servicemanager_exec:s0
+/system/bin/surfaceflinger	u:object_r:surfaceflinger_exec:s0
+/system/bin/drmserver	u:object_r:drmserver_exec:s0
+/system/bin/dumpstate   u:object_r:dumpstate_exec:s0
+/system/bin/vold	u:object_r:vold_exec:s0
+/system/bin/netd	u:object_r:netd_exec:s0
+/system/bin/rild	u:object_r:rild_exec:s0
+/system/bin/mediaserver	u:object_r:mediaserver_exec:s0
+/system/bin/mdnsd	u:object_r:mdnsd_exec:s0
+/system/bin/installd	u:object_r:installd_exec:s0
+/system/bin/keystore	u:object_r:keystore_exec:s0
+/system/bin/fingerprintd u:object_r:fingerprintd_exec:s0
+/system/bin/gatekeeperd u:object_r:gatekeeperd_exec:s0
+/system/bin/debuggerd	u:object_r:debuggerd_exec:s0
+/system/bin/debuggerd64	u:object_r:debuggerd_exec:s0
+/system/bin/wpa_supplicant	u:object_r:wpa_exec:s0
+/system/bin/sdcard      u:object_r:sdcardd_exec:s0
+/system/bin/dhcpcd      u:object_r:dhcp_exec:s0
+/system/bin/mtpd	u:object_r:mtp_exec:s0
+/system/bin/pppd	u:object_r:ppp_exec:s0
+/system/bin/tf_daemon	u:object_r:tee_exec:s0
+/system/bin/racoon	u:object_r:racoon_exec:s0
+/system/xbin/su		u:object_r:su_exec:s0
+/system/xbin/procrank   u:object_r:procrank_exec:s0
+/system/xbin/perfprofd  u:object_r:perfprofd_exec:s0
+/system/xbin/simpleperf u:object_r:system_file:s0
+/system/vendor/bin/gpsd u:object_r:gpsd_exec:s0
+/system/bin/dnsmasq     u:object_r:dnsmasq_exec:s0
+/system/bin/hostapd     u:object_r:hostapd_exec:s0
+/system/bin/clatd	u:object_r:clatd_exec:s0
+/system/bin/lmkd        u:object_r:lmkd_exec:s0
+/system/bin/inputflinger u:object_r:inputflinger_exec:s0
+/system/bin/logd        u:object_r:logd_exec:s0
+/system/bin/uncrypt     u:object_r:uncrypt_exec:s0
+/system/bin/logwrapper  u:object_r:system_file:s0
+/system/bin/vdc         u:object_r:vdc_exec:s0
+/system/bin/install-recovery.sh u:object_r:install_recovery_exec:s0
+/system/bin/dex2oat     u:object_r:dex2oat_exec:s0
+# patchoat executable has (essentially) the same requirements as dex2oat.
+/system/bin/patchoat    u:object_r:dex2oat_exec:s0
+/system/bin/sgdisk      u:object_r:sgdisk_exec:s0
+/system/bin/blkid       u:object_r:blkid_exec:s0
+/system/bin/tzdatacheck u:object_r:tzdatacheck_exec:s0
+
+#############################
+# Vendor files
+#
+/vendor(/.*)?		u:object_r:system_file:s0
+/vendor/bin/gpsd	u:object_r:gpsd_exec:s0
+
+#############################
+# OEM and ODM files
+#
+/odm(/.*)?              u:object_r:system_file:s0
+/oem(/.*)?              u:object_r:oemfs:s0
+
+
+#############################
+# Data files
+#
+# NOTE: When modifying existing label rules, changes may also need to
+# propagate to the "Expanded data files" section.
+#
+/data(/.*)?		u:object_r:system_data_file:s0
+/data/.layout_version		u:object_r:install_data_file:s0
+/data/unencrypted(/.*)?         u:object_r:unencrypted_data_file:s0
+/data/backup(/.*)?		u:object_r:backup_data_file:s0
+/data/secure/backup(/.*)?	u:object_r:backup_data_file:s0
+/data/security(/.*)?	u:object_r:security_file:s0
+/data/system/ndebugsocket	u:object_r:system_ndebug_socket:s0
+/data/drm(/.*)?		u:object_r:drm_data_file:s0
+/data/gps(/.*)?		u:object_r:gps_data_file:s0
+/data/resource-cache(/.*)? u:object_r:resourcecache_data_file:s0
+/data/dalvik-cache(/.*)? u:object_r:dalvikcache_data_file:s0
+/data/dalvik-cache/profiles(/.*)? u:object_r:dalvikcache_profiles_data_file:s0
+/data/adb(/.*)?		u:object_r:adb_data_file:s0
+/data/anr(/.*)?		u:object_r:anr_data_file:s0
+/data/app(/.*)?                       u:object_r:apk_data_file:s0
+/data/app/[^/]+/oat(/.*)?                u:object_r:dalvikcache_data_file:s0
+/data/app/vmdl[^/]+\.tmp(/.*)?           u:object_r:apk_tmp_file:s0
+/data/app/vmdl[^/]+\.tmp/oat(/.*)?           u:object_r:dalvikcache_data_file:s0
+/data/app-private(/.*)?               u:object_r:apk_private_data_file:s0
+/data/app-private/vmdl.*\.tmp(/.*)?   u:object_r:apk_private_tmp_file:s0
+/data/tombstones(/.*)?	u:object_r:tombstone_data_file:s0
+/data/local/tmp(/.*)?	u:object_r:shell_data_file:s0
+/data/media(/.*)?	u:object_r:media_rw_data_file:s0
+/data/mediadrm(/.*)?	u:object_r:media_data_file:s0
+/data/property(/.*)?	u:object_r:property_data_file:s0
+
+# Misc data
+/data/misc/adb(/.*)?            u:object_r:adb_keys_file:s0
+/data/misc/audio(/.*)?          u:object_r:audio_data_file:s0
+/data/misc/bluetooth(/.*)?      u:object_r:bluetooth_data_file:s0
+/data/misc/bluedroid(/.*)?      u:object_r:bluetooth_data_file:s0
+/data/misc/bluedroid/\.a2dp_ctrl u:object_r:bluetooth_socket:s0
+/data/misc/bluedroid/\.a2dp_data u:object_r:bluetooth_socket:s0
+/data/misc/camera(/.*)?         u:object_r:camera_data_file:s0
+/data/misc/dhcp(/.*)?           u:object_r:dhcp_data_file:s0
+/data/misc/gatekeeper(/.*)?     u:object_r:gatekeeper_data_file:s0
+/data/misc/keychain(/.*)?       u:object_r:keychain_data_file:s0
+/data/misc/keystore(/.*)?       u:object_r:keystore_data_file:s0
+/data/misc/logd(/.*)?           u:object_r:misc_logd_file:s0
+/data/misc/media(/.*)?          u:object_r:media_data_file:s0
+/data/misc/net(/.*)?            u:object_r:net_data_file:s0
+/data/misc/shared_relro(/.*)?   u:object_r:shared_relro_file:s0
+/data/misc/sms(/.*)?            u:object_r:radio_data_file:s0
+/data/misc/systemkeys(/.*)?     u:object_r:systemkeys_data_file:s0
+/data/misc/user(/.*)?           u:object_r:misc_user_data_file:s0
+/data/misc/vpn(/.*)?            u:object_r:vpn_data_file:s0
+/data/misc/wifi(/.*)?           u:object_r:wifi_data_file:s0
+/data/misc/wifi/sockets(/.*)?   u:object_r:wpa_socket:s0
+/data/misc/wifi/sockets/wpa_ctrl.*   u:object_r:system_wpa_socket:s0
+/data/misc/wifi/hostapd(/.*)?   u:object_r:wpa_socket:s0
+/data/misc/zoneinfo(/.*)?       u:object_r:zoneinfo_data_file:s0
+/data/misc/vold(/.*)?           u:object_r:vold_data_file:s0
+/data/misc/perfprofd(/.*)?      u:object_r:perfprofd_data_file:s0
+/data/system/heapdump(/.*)?     u:object_r:heapdump_data_file:s0
+
+# Fingerprint data
+/data/system/users/[0-9]+/fpdata(/.*)? u:object_r:fingerprintd_data_file:s0
+
+# Bootchart data
+/data/bootchart(/.*)?		u:object_r:bootchart_data_file:s0
+
+#############################
+# Expanded data files
+#
+/mnt/expand(/.*)?                                   u:object_r:mnt_expand_file:s0
+/mnt/expand/[^/]+(/.*)?                             u:object_r:system_data_file:s0
+/mnt/expand/[^/]+/app(/.*)?                         u:object_r:apk_data_file:s0
+/mnt/expand/[^/]+/app/[^/]+/oat(/.*)?               u:object_r:dalvikcache_data_file:s0
+/mnt/expand/[^/]+/app/vmdl[^/]+\.tmp(/.*)?          u:object_r:apk_tmp_file:s0
+/mnt/expand/[^/]+/app/vmdl[^/]+\.tmp/oat(/.*)?      u:object_r:dalvikcache_data_file:s0
+/mnt/expand/[^/]+/local/tmp(/.*)?                   u:object_r:shell_data_file:s0
+/mnt/expand/[^/]+/media(/.*)?                       u:object_r:media_rw_data_file:s0
+/mnt/expand/[^/]+/misc/vold(/.*)?                   u:object_r:vold_data_file:s0
+
+# coredump directory for userdebug/eng devices
+/cores(/.*)?                    u:object_r:coredump_file:s0
+
+# Wallpaper file for other users
+/data/system/users/[0-9]+/wallpaper		u:object_r:wallpaper_file:s0
+#############################
+# efs files
+#
+/efs(/.*)?		u:object_r:efs_file:s0
+#############################
+# Cache files
+#
+/cache(/.*)?		u:object_r:cache_file:s0
+/cache/.*\.data	u:object_r:cache_backup_file:s0
+/cache/.*\.restore	u:object_r:cache_backup_file:s0
+# LocalTransport (backup) uses this directory
+/cache/backup(/.*)?	u:object_r:cache_backup_file:s0
+#############################
+# sysfs files
+#
+/sys/devices/platform/nfc-power/nfc_power -- u:object_r:sysfs_nfc_power_writable:s0
+/sys/devices/system/cpu(/.*)?    u:object_r:sysfs_devices_system_cpu:s0
+/sys/power/wake_lock -- u:object_r:sysfs_wake_lock:s0
+/sys/power/wake_unlock -- u:object_r:sysfs_wake_lock:s0
+/sys/kernel/uevent_helper --	u:object_r:usermodehelper:s0
+/sys/module/lowmemorykiller(/.*)? -- u:object_r:sysfs_lowmemorykiller:s0
+
+#############################
+# asec containers
+/mnt/asec(/.*)?             u:object_r:asec_apk_file:s0
+/mnt/asec/[^/]+/[^/]+\.zip  u:object_r:asec_public_file:s0
+/mnt/asec/[^/]+/lib(/.*)?   u:object_r:asec_public_file:s0
+/data/app-asec(/.*)?        u:object_r:asec_image_file:s0
+
+#############################
+# external storage
+/mnt/media_rw(/.*)?         u:object_r:mnt_media_rw_file:s0
+/mnt/user(/.*)?             u:object_r:mnt_user_file:s0
+/mnt/runtime(/.*)?          u:object_r:storage_file:s0
+/storage(/.*)?              u:object_r:storage_file:s0
+#line 1 "device/mediatek/common/sepolicy/file_contexts"
 #
 #############################
 # Custom files
@@ -34,7 +354,6 @@
 /data/mediaserver(/.*)? u:object_r:mediaserver_data_file:s0
 /data/misc/acdapi(/.*)? u:object_r:acdapi_data_file:s0
 /data/misc/akmd_set.txt u:object_r:akmd8963_access_file1:s0
-/data/misc/magpara u:object_r:memsicd3416x_access_file1:s0
 /data/misc/mblog(/.*)? u:object_r:logmisc_data_file:s0
 /data/misc/xlog(/.*)? u:object_r:xlog_data_file:s0
 /data/misc/PDC.ini u:object_r:akmd8963_access_file2:s0
@@ -43,6 +362,8 @@
 /data/misc/radvd(/.*)? u:object_r:radvd_data_file:s0
 /data/misc/sensor.log		u:object_r:bmm050_sensor_log_file:s0
 /data/misc/sensor(/.*)?		u:object_r:sensor_data_file:s0
+/data/mxg2320(/.*)?         u:object_r:mxg2320_data_file:s0
+/data/mmc3524x(/.*)?         u:object_r:mmc3524x_data_file:s0
 /data/misc/stp_dump(/.*)? u:object_r:stp_dump_data_file:s0
 /data/misc/wide-dhcpv6(/.*)? u:object_r:wide_dhcpv6_data_file:s0
 /data/misc/wpa_supplicant(/.*)? u:object_r:wpa_supplicant_data_file:s0
@@ -50,20 +371,16 @@
 /data/nvram(/.*)? u:object_r:nvram_data_file:s0
 /data/cct(/.*)? u:object_r:cct_data_file:s0
 /data/md3(/.*)? u:object_r:c2k_file:s0
-/data/mal(/.*)? u:object_r:mal_data_file:s0
 /nvdata(/.*)? u:object_r:nvdata_file:s0
-/nvcfg(/.*)? u:object_r:nvcfg_file:s0
 /data/SF_dump(./*)? u:object_r:sf_bqdump_data_file:s0
-/data/ipsec(/.*)? u:object_r:wod_ipsec_conf_file:s0
-/data/ipsec/wo(/.*)? u:object_r:wod_apn_conf_file:s0
+/data/ipsec(./*)? u:object_r:wod_ipsec_conf_file:s0
+/data/ipsec/wo(./*)? u:object_r:wod_apn_conf_file:s0
 /data/data_tmpfs_log(/.*)? u:object_r:data_tmpfs_log_file:s0
 /data/tmp_mnt/data_tmpfs_log(/.*)? u:object_r:data_tmpfs_log_file:s0
 /data/setkey.conf        u:object_r:ims_ipsec_data_file:s0
 /data/setkey_bak.conf    u:object_r:ims_ipsec_data_file:s0
 /data/setkey_latest.conf u:object_r:ims_ipsec_data_file:s0
 /data/key_provisioning(/.*)?         u:object_r:key_install_data_file:s0
-/data/thh(/.*)? u:object_r:teei_data_file:s0
-/data/gnss_flp(/.*)?  u:object_r:mtkFlpDaemon_data_file:s0
 
 ##########################
 # Devices
@@ -84,17 +401,19 @@
 /dev/btif(/.*)? u:object_r:btif_device:s0
 /dev/btn(/.*)? u:object_r:btn_device:s0
 /dev/BU6429AF(/.*)? u:object_r:BU6429AF_device:s0
+/dev/LC898217AF(/.*)? u:object_r:LC898217AF_device:s0
 /dev/BU64745GWZAF(/.*)? u:object_r:BU64745GWZAF_device:s0
 /dev/MAINAF(/.*)? u:object_r:MAINAF_device:s0
 /dev/MAIN2AF(/.*)? u:object_r:MAIN2AF_device:s0
 /dev/SUBAF(/.*)? u:object_r:SUBAF_device:s0
 /dev/cache(/.*)? u:object_r:cache_device:s0
 /dev/CAM_CAL_DRV(/.*)? u:object_r:CAM_CAL_DRV_device:s0
-/dev/CAM_CAL_DRV1(/.*)? u:object_r:CAM_CAL_DRV1_device:s0
-/dev/CAM_CAL_DRV2(/.*)? u:object_r:CAM_CAL_DRV2_device:s0
+/dev/CAM_CAL_DRV_SHARP(/.*)? u:object_r:CAM_CAL_DRV_SHARP_device:s0
+/dev/CAM_CAL_DRV_OFILM(/.*)? u:object_r:CAM_CAL_DRV_OFILM_device:s0
+/dev/CAM_CAL_DRV_3L8(/.*)? u:object_r:CAM_CAL_DRV_3L8_device:s0
+/dev/CAM_CAL_DRV_3L9(/.*)? u:object_r:CAM_CAL_DRV_3L9_device:s0
 /dev/camera-fdvt(/.*)? u:object_r:camera_fdvt_device:s0
 /dev/camera-isp(/.*)? u:object_r:camera_isp_device:s0
-/dev/camera-dpe(/.*)? u:object_r:camera_dpe_device:s0
 /dev/camera-pipemgr(/.*)? u:object_r:camera_pipemgr_device:s0
 /dev/camera-sysram(/.*)? u:object_r:camera_sysram_device:s0
 /dev/ccci_monitor     u:object_r:ccci_monitor_device:s0
@@ -104,7 +423,6 @@
 /dev/dummy_cam_cal(/.*)? u:object_r:dummy_cam_cal_device:s0
 /dev/DW9714AF(/.*)? u:object_r:DW9714AF_device:s0
 /dev/DW9814AF(/.*)? u:object_r:DW9814AF_device:s0
-/dev/DW9810AF(/.*)? u:object_r:DW9810AF_device:s0
 /dev/AK7345AF(/.*)? u:object_r:AK7345AF_device:s0
 /dev/DW9714A(/.*)? u:object_r:DW9714A_device:s0
 /dev/DW9718AF(/.*)? u:object_r:DW9718AF_device:s0
@@ -131,6 +449,7 @@
 /dev/kd_camera_hw_bus2(/.*)? u:object_r:kd_camera_hw_bus2_device:s0
 /dev/kd_camera_hw(/.*)? u:object_r:kd_camera_hw_device:s0
 /dev/LC898122AF(/.*)? u:object_r:LC898122AF_device:s0
+/dev/LC898122OFILMAF(/.*)? u:object_r:LC898122OFILMAF_device:s0
 /dev/LC898212AF(/.*)? u:object_r:LC898212AF_device:s0
 /dev/logo(/.*)? u:object_r:logo_device:s0
 /dev/loop-control(/.*)? u:object_r:loop-control_device:s0
@@ -181,7 +500,7 @@
 /dev/MT_pmic(/.*)? u:object_r:MT_pmic_device:s0
 /dev/network.* u:object_r:network_device:s0
 /dev/nvram(/.*)? u:object_r:nvram_device:s0
-/dev/nxpspk(/.*)? u:object_r:smartpa_device:s0
+/dev/i2c_smartpa(/.*)? u:object_r:smartpa_device:s0
 /dev/otp        u:object_r:otp_device:s0
 /dev/pmem_multimedia(/.*)? u:object_r:pmem_multimedia_device:s0
 /dev/pmt(/.*)? u:object_r:pmt_device:s0
@@ -205,7 +524,6 @@
 /dev/tee1 u:object_r:tee_part_device:s0
 /dev/tee2 u:object_r:tee_part_device:s0
 /dev/sensor(/.*)? u:object_r:sensor_device:s0
-/dev/smartpa_i2c(/.*)? u:object_r:smartpa1_device:s0
 /dev/snapshot(/.*)? u:object_r:snapshot_device:s0
 /dev/socket/adbd(/.*)? u:object_r:adbd_socket:s0
 /dev/socket/agpsd2(/.*)? u:object_r:agpsd_socket:s0
@@ -222,8 +540,6 @@
 /dev/socket/mdnsd(/.*)? u:object_r:mdnsd_socket:s0
 /dev/socket/mdns(/.*)? u:object_r:mdns_socket:s0
 /dev/socket/mnld(/.*)? u:object_r:mnld_socket:s0
-/dev/socket/MPED(/.*)? u:object_r:MPED_socket:s0
-/dev/socket/mtkFlpDaemon(/.*)? u:object_r:mtkFlpDaemon_socket:s0
 /dev/socket/mtpd(/.*)? u:object_r:mtpd_socket:s0
 /dev/socket/netdiag(/.*)? u:object_r:netdiag_socket:s0
 /dev/socket/netd(/.*)? u:object_r:netd_socket:s0
@@ -233,13 +549,11 @@
 /dev/socket/rild3(/.*)? u:object_r:rild3_socket:s0
 /dev/socket/rild4(/.*)? u:object_r:rild4_socket:s0
 /dev/socket/rild-mal(/.*)? u:object_r:rild_mal_socket:s0
-/dev/socket/rilproxy-mal(/.*)? u:object_r:rild_mal_socket:s0
 /dev/socket/rild-mal-at(/.*)? u:object_r:rild_mal_at_socket:s0
 /dev/socket/rild-mal-md2(/.*)? u:object_r:rild_mal_md2_socket:s0
 /dev/socket/rild-mal-at-md2(/.*)? u:object_r:rild_mal_at_md2_socket:s0
 /dev/socket/rild-ims(/.*)? u:object_r:rild_ims_socket:s0
 /dev/socket/volte_imsm(/.*)? u:object_r:rild_imsm_socket:s0
-/dev/socket/volte_imsm_dongle(/.*)? u:object_r:rild_imsm_socket:s0
 /dev/socket/rild-atci-md2(/.*)? u:object_r:rild_atci_md2_socket:s0
 /dev/socket/rild-atci(/.*)? u:object_r:rild_atci_socket:s0
 /dev/socket/rild-vsim(/.*)? u:object_r:rild_vsim_socket:s0
@@ -260,9 +574,7 @@
 /dev/socket/rild(/.*)? u:object_r:rild_socket:s0
 /dev/socket/rild-via u:object_r:rild_via_socket:s0
 /dev/socket/rild-atci-c2k(/.*)? u:object_r:rild_atci_c2k_socket:s0
-/dev/socket/rilproxy-atci(/.*)? u:object_r:rilproxy_atci_socket:s0
 /dev/socket/mal-mfi(/.*)? u:object_r:mal_mfi_socket:s0
-/dev/socket/mal-mfi-dongle(/.*)? u:object_r:mal_mfi_socket:s0
 /dev/socket/rpc u:object_r:rpc_socket:s0
 /dev/socket/soc_vt_stk(/.*)? u:object_r:soc_vt_stk_socket:s0
 /dev/socket/soc_vt_svc(/.*)? u:object_r:soc_vt_svc_socket:s0
@@ -274,9 +586,7 @@
 /dev/socket/volte_imcb(/.*)? u:object_r:volte_imcb_socket:s0
 /dev/socket/volte_ua(/.*)? u:object_r:volte_ua_socket:s0
 /dev/socket/volte_imsa1(/.*)? u:object_r:volte_imsa1_socket:s0
-/dev/socket/rcs_ua_proxy(/.*)? u:object_r:rcs_ua_proxy_socket:s0
 /dev/socket/volte_imsvt1(/.*)? u:object_r:volte_imsvt1_socket:s0
-/dev/socket/volte_vt(/.*)? u:object_r:volte_vt_socket:s0
 /dev/socket/wpa_wlan0(/.*)? u:object_r:wpa_wlan0_socket:s0
 /dev/socket/zygote(/.*)? u:object_r:zygote_socket:s0
 /dev/socket/wod_action(/.*)? u:object_r:wod_action_socket:s0
@@ -319,9 +629,7 @@
 /dev/wmtdetect(/.*)? u:object_r:wmtdetect_device:s0
 /dev/wmtWifi(/.*)? u:object_r:wmtWifi_device:s0
 /dev/xlog u:object_r:xlog_device:s0
-/dev/ancservice(/.*)? u:object_r:ancservice_device:s0
 /dev/offloadservice(/.*)? u:object_r:offloadservice_device:s0
-/dev/audio_ipi(/.*)? u:object_r:audio_ipi_device:s0
 /dev/irtx u:object_r:irtx_device:s0
 /dev/spm(/.*)? u:object_r:spm_device:s0
 
@@ -349,19 +657,17 @@
 /dev/block/mmcblk1 u:object_r:mmcblk1_block_device:s0
 /dev/block/mmcblk1p1 u:object_r:mmcblk1p1_block_device:s0
 
+#Add for ota update
+/dev/block/mmcblk0p2 u:object_r:ota_block_device:s0
+/dev/block/mmcblk0p37 u:object_r:ota_block_device:s0
+
 /protect_f(/.*)?         u:object_r:protect_f_data_file:s0
 /protect_s(/.*)?         u:object_r:protect_s_data_file:s0
 /persist(/.*)?         u:object_r:persist_data_file:s0
 /dev/ttyACM0        u:object_r:ttyACM_device:s0
 /dev/hrm       u:object_r:hrm_device:s0
 /dev/trusty-ipc-dev0 u:object_r:tee_device:s0
-/dev/teei_config u:object_r:teei_config_device:s0
-/dev/teei_client u:object_r:teei_client_device:s0
-/dev/tz_vfs u:object_r:teei_vfs_device:s0
-/dev/emmcrpmb0 u:object_r:teei_rpmb_device:s0
-/dev/teei_fp u:object_r:teei_fp_device:s0
-/dev/mbim u:object_r:mbim_device:s0
-/dev/bl229x u:object_r:bl229x_device:s0
+
 #############################
 # sysfs files
 #
@@ -390,6 +696,7 @@
 /system/bin/akmd09912 u:object_r:akmd09912_exec:s0
 /system/bin/akmd8963 u:object_r:akmd8963_exec:s0
 /system/bin/akmd8975 u:object_r:akmd8975_exec:s0
+/system/bin/mxg2320d u:object_r:mxg2320d_exec:s0
 /system/bin/ami304d u:object_r:ami304d_exec:s0
 /system/bin/atcid u:object_r:atcid_exec:s0
 /system/bin/atci_service u:object_r:atci_service_exec:s0
@@ -446,11 +753,12 @@
 /system/bin/MtkCodecService u:object_r:MtkCodecService_exec:s0
 /system/bin/mtkrildmd2 u:object_r:mtkrildmd2_exec:s0
 /system/bin/mtkrild u:object_r:mtkrild_exec:s0
-/system/bin/rilproxy u:object_r:rilproxy_exec:s0
 /system/bin/muxreport u:object_r:muxreport_exec:s0
 /system/bin/netdiag u:object_r:netdiag_exec:s0
 /system/bin/nvram_agent_binder u:object_r:nvram_agent_binder_exec:s0
 /system/bin/nvram_daemon u:object_r:nvram_daemon_exec:s0
+/system/bin/nvram_write u:object_r:nvram_write_exec:s0
+/system/bin/sys_reboot_write u:object_r:sys_reboot_write_exec:s0
 /system/bin/orientationd u:object_r:orientationd_exec:s0
 /system/bin/permission_check u:object_r:permission_check_exec:s0
 /system/bin/poad u:object_r:poad_exec:s0
@@ -468,21 +776,21 @@
 /system/bin/sn u:object_r:sn_exec:s0
 /system/bin/statusd u:object_r:statusd_exec:s0
 /system/bin/terservice u:object_r:terservice_exec:s0
+/system/bin/tfa9897_test u:object_r:tfa9897_test_exec:s0
+/system/bin/climax_hostSW u:object_r:climax_hostSW_exec:s0
 /system/bin/thermald u:object_r:thermald_exec:s0
 /system/bin/thermal_manager u:object_r:thermal_manager_exec:s0
-/system/bin/thermalloadalgod u:object_r:thermalloadalgod_exec:s0
+/system/bin/thermalloadalgod u:object_r:thermalloadalgod_exec:s0  
 /system/bin/thermal u:object_r:thermal_exec:s0
 /system/bin/tiny_mkswap u:object_r:tiny_mkswap_exec:s0
 /system/bin/tiny_swapon u:object_r:tiny_swapon_exec:s0
 /system/bin/tune2fs u:object_r:tune2fs_exec:s0
 /system/bin/viarild u:object_r:viarild_exec:s0
 /system/bin/volte_imcb u:object_r:volte_imcb_exec:s0
-/system/bin/volte_rcs_ua u:object_r:volte_rcs_ua_exec:s0
 /system/bin/volte_stack u:object_r:volte_stack_exec:s0
 /system/bin/volte_ua u:object_r:volte_ua_exec:s0
 /system/bin/wfca u:object_r:wfca_exec:s0
 /system/bin/mtkmal u:object_r:mtkmal_exec:s0
-/system/bin/volte_imsm_md u:object_r:volte_imsm_md_exec:s0
 /system/bin/wifi2agps u:object_r:wifi2agps_exec:s0
 /system/bin/wmt_loader u:object_r:wmt_loader_exec:s0
 /system/bin/xlog u:object_r:xlog_exec:s0
@@ -492,8 +800,6 @@
 /system/vendor/bin/pvrsrvctl u:object_r:pvrsrvctl_exec:s0
 /system/xbin/BGW u:object_r:BGW_exec:s0
 /system/xbin/mnld u:object_r:mnld_exec:s0
-/system/xbin/MPED u:object_r:MPED_exec:s0
-/system/xbin/mtkFlpDaemon u:object_r:mtkFlpDaemon_exec:s0
 /system/bin/md_ctrl u:object_r:md_ctrl_exec:s0
 /system/bin/cmddumper u:object_r:cmddumper_exec:s0
 /system/bin/epdg_wod u:object_r:epdg_wod_exec:s0
@@ -505,21 +811,71 @@
 /system/bin/spm_loader u:object_r:spm_loader_exec:s0
 /system/bin/vtservice u:object_r:vtservice_exec:s0
 /system/bin/hotknot_native_service u:object_r:hotknot_native_exec:s0
-/system/bin/teei_daemon u:object_r:teei_daemon_exec:s0
-/system/bin/init_thh u:object_r:init_thh_service_exec:s0
-/system/bin/rda u:object_r:rda_exec:s0
 /system/bin/pppd_btdun u:object_r:pppd_btdun_exec:s0
-/system/bin/mbimd u:object_r:mbimd_exec:s0
-/system/bin/atcp u:object_r:atcp_exec:s0
-/system/bin/lannetmngrd u:object_r:lannetmngrd_exec:s0
-/system/bin/md_monitor u:object_r:md_monitor_exec:s0
-/system/bin/wechatproxy u:object_r:wechatproxy_exec:s0
 
 # Wallpaper file for smartbook
 /data/system/users/[0-9]+/smartbook_wallpaper	u:object_r:wallpaper_file:s0
 
 #fat on nand image
 /fat(/.*)?  u:object_r:fon_image_data_file:s0
-# aka.jiang add for fingerprint ET3XX 20160308
-/system/bin/etsd  u:object_r:etsd_exec:s0
-/dev/esfp0 	  u:object_r:etsd_data_file:s0
+
+# leeco: recovery should access data partition
+#/data(/.*)?           u:object_r:system_data_file:s0
+/data/data(/.*)?       u:object_r:system_data_file:s0
+# ==============================================
+# MTK Policy Rule: fingerprint
+# ==============================================
+/dev/goodix_fp                 u:object_r:goodixfingerprintd_device:s0
+/system/bin/goodixfingerprintd u:object_r:goodixfingerprintd_exec:s0
+
+# leeco: leuirecovery
+/system/bin/leuirecovery u:object_r:leuirecovery_exec:s0
+
+#Add for ota force update
+/dev/block/mmcblk0p10 u:object_r:frp_block_device:s0
+#line 1 "vendor/letv/sepolicy/common/file_contexts"
+#transfer backuprestore add
+/system/bin/tr_app_data_service                 u:object_r:transfer_exec:s0
+
+/dev/socket/transfer                       u:object_r:transfer_socket:s0
+#line 1 "device/mediatek/mt6795/sepolicy/file_contexts"
+#########################################
+# Platform dependent label definitions
+#
+
+# define raw block partition label
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.MSDC0/by-name/proinfo		u:object_r:nvram_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.MSDC0/by-name/nvram		u:object_r:nvram_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.MSDC0/by-name/nvdata		u:object_r:nvdata_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.MSDC0/by-name/frp		u:object_r:frp_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.MSDC0/by-name/expdb		u:object_r:expdb_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.MSDC0/by-name/misc2		u:object_r:misc2_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.MSDC0/by-name/logo		u:object_r:logo_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.MSDC0/by-name/para		u:object_r:para_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.MSDC0/by-name/tee1		u:object_r:tee_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.MSDC0/by-name/tee2		u:object_r:tee_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.MSDC0/by-name/seccfg		u:object_r:seccfg_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.MSDC0/by-name/secro		u:object_r:secro_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.MSDC0/by-name/userdata		u:object_r:userdata_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.MSDC0/by-name/cache		u:object_r:cache_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.MSDC0/by-name/recovery		u:object_r:recovery_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.MSDC0/by-name/protect1		u:object_r:protect1_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.MSDC0/by-name/protect2		u:object_r:protect2_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.MSDC0/by-name/keystore		u:object_r:keystore_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.MSDC0/by-name/oemkeystore	u:object_r:oemkeystore_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.MSDC0/by-name/boot	        u:object_r:boot_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.MSDC0/by-name/persist           u:object_r:persist_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.MSDC0/by-name/system            u:object_r:system_block_device:s0
+#line 1 "device/letv/x500/sepolicy/file_contexts"
+#For free flow
+/dev/socket/letvbackup(/.*)? u:object_r:letvbackup_socket:s0
+/system/bin/tinyproxy u:object_r:tinyproxy_exec:s0
+/data/tinyproxy(/.*)? u:object_r:tinyproxy_data_file:s0
+
+# lock_wallpaper file for other users
+/data/system/users/[0-9]+/lock_wallpaper        u:object_r:wallpaper_file:s0
+
+/dev/block/mmcblk0p13    u:object_r:frp_block_device:s0
+
+#add by luxi: add for privacy data
+/dev/socket/sdcard u:object_r:vold_socket:s0

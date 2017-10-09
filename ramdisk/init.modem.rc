@@ -124,7 +124,7 @@ service ccci_rpcd /system/bin/ccci_rpcd
     group radio system
     class core
     oneshot
-    disable
+    #disable
 
 service pppd_gprs /system/bin/pppd_dt /dev/ttyACM0 debug noauth refuse-eap usepeerdns nodetach
     user root

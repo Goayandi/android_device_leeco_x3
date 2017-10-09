@@ -7,8 +7,6 @@ import init.project.rc
 import init.volte.rc
 import init.mal.rc
 import init.trustonic.rc
-
-import init.ssd.rc
 import init.modem.rc	
 
 on late-fs

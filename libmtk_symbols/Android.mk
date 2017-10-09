@@ -3,7 +3,6 @@ include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := \
     mtk_xlog.cpp \
-    mtk_gui.cpp \
     MediatekHacks.cpp \
     mtk_ui.cpp \
     mtk_omx.cpp \

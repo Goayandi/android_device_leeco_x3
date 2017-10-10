@@ -28,6 +28,9 @@ LOCAL_PATH := device/LeEco/X3
 PRODUCT_AAPT_CONFIG := normal xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
+# Recovery allowed devices
+#TARGET_OTA_ASSERT_DEVICE := x3,X500,X507,X509,X3,x500,x507,x509,X502,x502
+
 # Power
 PRODUCT_PACKAGES += \
     power.default \

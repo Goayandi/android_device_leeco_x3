@@ -457,7 +457,7 @@
 /system/bin/thermal u:object_r:thermal_exec:s0
 /system/bin/tiny_mkswap u:object_r:tiny_mkswap_exec:s0
 /system/bin/tiny_swapon u:object_r:tiny_swapon_exec:s0
-#/system/bin/tune2fs u:object_r:tune2fs_exec:s0
+/system/bin/tune2fs u:object_r:tune2fs_exec:s0
 /system/bin/viarild u:object_r:viarild_exec:s0
 /system/bin/volte_imcb u:object_r:volte_imcb_exec:s0
 /system/bin/volte_stack u:object_r:volte_stack_exec:s0

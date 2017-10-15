@@ -97,7 +97,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     lib_driver_cmd_mt66xx \
     libwpa_client \
-    wpa_supplicant
+    wpa_supplicant \
+    wifilogd 
 
 # Media	
 PRODUCT_COPY_FILES += \
@@ -313,3 +314,19 @@ PRODUCT_PACKAGES += libprotobuf-cpp-full
 # Fingerprint Sensor
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service
+    
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-impl 
+    
+# Light HAL
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-impl
+    
+PRODUCT_PACKAGES += \
+    context_hub.default \
+    android.hardware.sensors@1.0-impl
+
+# HW Composer
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.composer@2.1-impl

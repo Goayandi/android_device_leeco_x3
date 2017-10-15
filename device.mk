@@ -330,3 +330,13 @@ PRODUCT_PACKAGES += \
 # HW Composer
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-impl
+
+# new gatekeeper HAL
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl
+    
+ ifeq ($(ENABLE_TREBLE), true)
+PRODUCT_PACKAGES +=                         \
+    android.hardware.nfc@1.0-service        \
+    android.hardware.gatekeeper@1.0-service 
+ endif

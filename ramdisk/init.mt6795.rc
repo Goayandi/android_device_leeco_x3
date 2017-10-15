@@ -1328,12 +1328,12 @@ on property:ro.build.type=userdebug
 service emsvr_user /system/bin/em_svr
     disabled
     user system
-    group system radio diag net_bt_stack
+    group system radio diag bluetooth
 
 service emsvr /system/bin/em_svr
     disabled
     user root
-    group net_bt_stack
+    group bluetooth
 
 #
 #emsvr service (end)

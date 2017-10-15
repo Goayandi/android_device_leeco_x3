@@ -313,7 +313,8 @@ PRODUCT_PACKAGES += libprotobuf-cpp-full
 
 # Fingerprint Sensor
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service
+    fingerprintd \
+    android.hardware.biometrics.fingerprint@2.1-impl
     
 # Vibrator
 PRODUCT_PACKAGES += \
@@ -346,7 +347,10 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl
 
 PRODUCT_PACKAGES += \
-    android.hardware.audio.effect@2.0-impl
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio.effect@2.0-impl \
+    android.hardware.broadcastradio@1.0-impl \
+    android.hardware.soundtrigger@2.0-impl
     
 # Boot control
 PRODUCT_PACKAGES += \
@@ -356,4 +360,5 @@ ifeq ($(ENABLE_TREBLE), true)
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-service
 endif
+
 

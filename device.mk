@@ -308,3 +308,8 @@ PRODUCT_PACKAGES += \
 
 # Include explicitly to work around Facelock issues
 PRODUCT_PACKAGES += libprotobuf-cpp-full
+
+
+# Fingerprint Sensor
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1-service

@@ -196,8 +196,8 @@ service goodixfpd /system/bin/goodixfingerprintd
     user system
     group system
 
-service fingerprintd /system/bin/fingerprintd
-    class main
-    user system
-    group system
+#service fingerprintd /system/bin/fingerprintd
+#    class main
+#    user system
+#    group system
 # goodix fingerprint end

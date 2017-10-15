@@ -25,7 +25,7 @@ on init
 export LD_PRELOAD "libmtk_symbols.so"
 
     # Support legacy paths
-    symlink /sdcard /mnt/sdcard
+    symlink /sdcard /storage/sdcard0 
 
     # if primary storage is physical, set ro.vold.primary_physical to 1
     # setprop ro.vold.primary_physical 1
@@ -357,7 +357,7 @@ on post-fs-data
     chown radio radio /sys/devices/platform/mtk-kpd/driver/kpd_call_state
 
     #Charging Battery
-    chown radio radio /sys/devices/platform/battery/Charging_CallState
+    chown radio radio /sys/devices/platform/battery/Charging_CallStsymlink /sdcard /storage/sdcard0 ate
 
     mkdir /data/amit/ 0770 system system
     mkdir /data/misc/sensors 0666 system system
@@ -419,7 +419,7 @@ on post-fs-data
     chown root diag /sys/bus/platform/drivers/eint/current_eint
 
     # for ppp options file
-    mkdir /data/misc/ppp 0770 bluetooth net_bt
+    mkdir /data/misc/ppp 0770 bluetooth bluetooth
 
     # Android SEC related device nodes
     mkdir /dev/sec c 182 0
@@ -1068,8 +1068,8 @@ on property:service.pppoe_wlan0.enable=1
 
 service DMAgent /system/bin/dm_agent_binder
     class main
-    user system
-    group system cache
+    user root
+    group root system cache
 
 service PPLAgent /system/bin/ppl_agent
     class main
@@ -1135,7 +1135,7 @@ service agpsd /system/bin/mtk_agpsd
     socket agpsd2 stream 660 system inet
     socket agpsd3 stream 660 system inet
     user gps
-    group gps inet sdcard_r sdcard_rw misc radio
+    group gps radio inet sdcard_r sdcard_rw misc radio
 
 service slpd /system/bin/slpd
     class main
@@ -1346,7 +1346,7 @@ service shutdown /system/bin/shutdown
 
 service NvRAMAgent /system/bin/nvram_agent_binder
     class main
-    user system
+    user root
     group system
 
 service thermal_manager /system/bin/thermal_manager
@@ -1366,8 +1366,8 @@ service thermald /system/bin/thermald
 
 service fuelgauged /system/bin/fuelgauged
     class main
-    user system
-    group system
+    user root
+    group root
 
 service sn /system/bin/sn
     class late_start
@@ -1401,7 +1401,7 @@ service batterywarning /system/bin/batterywarning
 service MtkCodecService /system/bin/MtkCodecService
     class main
     user system
-    group audio media sdcard_r
+    group camera media sdcard_r
 
 # GuiExt Server init
 service guiext-server /system/bin/guiext-server
@@ -1412,3 +1412,5 @@ service guiext-server /system/bin/guiext-server
 service kpoc_charger /system/bin/kpoc_charger
     class charger
 
+#oreo 
+mkdir /dev/block 0711 root

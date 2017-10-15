@@ -340,3 +340,10 @@ PRODUCT_PACKAGES +=                         \
     android.hardware.nfc@1.0-service        \
     android.hardware.gatekeeper@1.0-service 
  endif
+
+# Thermal packages
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@1.0-impl
+
+PRODUCT_PACKAGES += \
+    android.hardware.audio.effect@2.0-impl

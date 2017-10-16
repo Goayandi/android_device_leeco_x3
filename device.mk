@@ -37,7 +37,6 @@ PRODUCT_PACKAGES += \
     power.mt6795 \
     android.hardware.power@1.0-impl \
 
-
 # Camera
 PRODUCT_PACKAGES += \
     Snap

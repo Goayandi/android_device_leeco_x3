@@ -337,11 +337,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl
     
- ifeq ($(ENABLE_TREBLE), true)
+#ifeq ($(ENABLE_TREBLE), true)
 PRODUCT_PACKAGES +=                         \
     android.hardware.nfc@1.0-service        \
     android.hardware.gatekeeper@1.0-service 
- endif
+ #endif
 
 # Thermal packages
 PRODUCT_PACKAGES += \
@@ -357,9 +357,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl \
 
-ifeq ($(ENABLE_TREBLE), true)
+#ifeq ($(ENABLE_TREBLE), true)
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-service
-endif
+#endif
 
 

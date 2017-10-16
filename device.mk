@@ -309,3 +309,52 @@ PRODUCT_PACKAGES += \
 
 # Include explicitly to work around Facelock issues
 PRODUCT_PACKAGES += libprotobuf-cpp-full
+
+# Fingerprint Sensor
+PRODUCT_PACKAGES += \
+    fingerprintd \
+    android.hardware.biometrics.fingerprint@2.1-impl
+    
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-impl 
+    
+# Light HAL
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-impl
+    
+PRODUCT_PACKAGES += \
+    context_hub.default \
+    android.hardware.sensors@1.0-impl
+
+# HW Composer
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.composer@2.1-impl
+
+# new gatekeeper HAL
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl
+    
+#ifeq ($(ENABLE_TREBLE), true)
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-service 
+ #endif
+
+# Thermal packages
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@1.0-impl
+
+PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio.effect@2.0-impl \
+    android.hardware.broadcastradio@1.0-impl \
+    android.hardware.soundtrigger@2.0-impl
+    
+# Boot control
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.0-impl 
+
+#ifeq ($(ENABLE_TREBLE), true)
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.0-service
+#endif

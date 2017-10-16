@@ -355,7 +355,7 @@ PRODUCT_PACKAGES += \
     
 # Boot control
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl \
+    android.hardware.boot@1.0-impl 
 
 #ifeq ($(ENABLE_TREBLE), true)
 PRODUCT_PACKAGES += \

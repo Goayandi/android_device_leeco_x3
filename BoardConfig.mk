@@ -210,6 +210,10 @@ TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 # Seccomp Filter
 BOARD_SECCOMP_POLICY := \
        $(LOCAL_PATH)/seccomp
+       
+# SELinux
+BOARD_SEPOLICY_DIRS := \
+    device/LeEco/X3/sepolicy
 
 # Legacy blobs
 TARGET_NEEDS_TEXT_RELOCATIONS := true 

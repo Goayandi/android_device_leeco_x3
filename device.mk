@@ -34,7 +34,9 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # Power
 PRODUCT_PACKAGES += \
     power.default \
-    power.mt6795
+    power.mt6795 \
+    android.hardware.power@1.0-impl \
+
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -96,10 +98,12 @@ PRODUCT_PACKAGES += \
 # Wifi
 PRODUCT_PACKAGES += \
     lib_driver_cmd_mt66xx \
+    android.hardware.wifi@1.0-service \
     libwpa_client \
-    wpa_supplicant \
-    wifilogd 
-
+    wificond \
+    wifilogd \
+    wpa_supplicant
+ 
 # Media	
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
@@ -329,7 +333,8 @@ PRODUCT_PACKAGES += \
     
 PRODUCT_PACKAGES += \
     context_hub.default \
-    android.hardware.sensors@1.0-impl
+    android.hardware.sensors@1.0-impl \
+    android.hardware.contexthub@1.0-impl
 
 # HW Composer
 PRODUCT_PACKAGES += \
@@ -362,3 +367,95 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-service
 #endif
+
+PRODUCT_FULL_TREBLE_OVERRIDE := true
+
+PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-service \
+    android.hardware.bluetooth@1.0-service \
+    android.hardware.contexthub@1.0-service \
+    android.hardware.gnss@1.0-service \
+    android.hardware.drm@1.0-service \
+    android.hardware.light@2.0-service \
+    android.hardware.memtrack@1.0-service \
+    android.hardware.nfc@1.0-service \
+    android.hardware.power@1.0-service \
+    android.hardware.sensors@1.0-service \
+    android.hardware.thermal@1.0-service \
+    android.hardware.vr@1.0-service 
+
+# RenderScript HAL
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
+
+#gralloc	
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.mapper@2.0-impl 
+	
+#memtrack
+PRODUCT_PACKAGES += \
+	android.hardware.memtrack@1.0-impl
+	
+#drm HAL
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl \
+
+#CAMERA
+PRODUCT_PACKAGES += \
+    camera.device@3.2-impl \
+    android.hardware.camera.provider@2.4-impl \
+
+# Bluetooth HAL
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl
+
+#GNSS HAL
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-impl
+
+#USB HAL
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
+
+# Test HAL for hwbinder performance benchmark.
+PRODUCT_PACKAGES += \
+    android.hardware.tests.libhwbinder@1.0-impl
+	
+# Test HAL for FMQ performance benchmark.
+PRODUCT_PACKAGES += \
+    android.hardware.tests.msgq@1.0-impl
+	
+# Keymaster HAL
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl \
+    android.hardware.keymaster@3.0-service
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.vndk.version=26.1.0 \
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0.vndk-sp\
+    android.hardware.graphics.allocator@2.0.vndk-sp\
+    android.hardware.graphics.mapper@2.0.vndk-sp\
+    android.hardware.graphics.common@1.0.vndk-sp\
+    android.hidl.base@1.0.vndk-sp\
+    libhwbinder.vndk-sp\
+    libbase.vndk-sp\
+    libcutils.vndk-sp\
+    libhardware.vndk-sp\
+    libhidlbase.vndk-sp\
+    libhidltransport.vndk-sp\
+    libutils.vndk-sp\
+    libc++.vndk-sp\
+    libRS_internal.vndk-sp\
+    libRSDriver.vndk-sp\
+    libRSCpuRef.vndk-sp\
+    libbcinfo.vndk-sp\
+    libblas.vndk-sp\
+    libft2.vndk-sp\
+    libpng.vndk-sp\
+    libcompiler_rt.vndk-sp\
+    libbacktrace.vndk-sp\
+    libunwind.vndk-sp\
+    liblzma.vndk-sp

@@ -256,3 +256,5 @@ endif
 #ro.com.android.dataroaming=false \
 #net.tethering.noprovisioning=true \
 #ro.setupwizard.rotation_locked=true
+
+DEVICE_MATRIX_FILE   := $(LOCAL_PATH)/compatibility_matrix.xml

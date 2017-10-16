@@ -310,6 +310,10 @@ PRODUCT_PACKAGES += \
 # Include explicitly to work around Facelock issues
 PRODUCT_PACKAGES += libprotobuf-cpp-full
 
+# Vendor Interface Manifest
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/manifest.xml:vendor/manifest.xml
+
 # Fingerprint Sensor
 PRODUCT_PACKAGES += \
     fingerprintd \

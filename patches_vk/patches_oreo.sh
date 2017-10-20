@@ -1,12 +1,24 @@
-#!/bin/bash
-cd ../../../..
-cd system/core
-git apply -v ../../device/LeEco/X3/patches_vk/system/core/system_core.patch
-cd ../..
-cd bionic
-git apply -v ../device/LeEco/X3/patches_vk/bionic/bionic.patch
-cd ..
-cd frameworks/av
-git apply -v ../../device/LeEco/X3/patches_vk/frameworks/av/frameworks_av.patch
-git apply -v ../../device/LeEco/X3/patches_vk/frameworks/av/frameworks_av_2.patch
-cd ../..
+#!/bin/sh
+
+echo $1
+rootdirectory="$PWD"
+# ---------------------------------
+
+dirs="build/make/core build/soong system/core bionic frameworks/av"
+
+# red + nocolor
+RED='\033[0;31m'
+NC='\033[0m'
+
+
+for dir in $dirs ; do
+	cd $rootdirectory
+	cd $dir
+        echo -e "\n${RED}Applying ${NC}$dir ${RED}patches...${NC}\n"
+	#git am $rootdirectory/device/LeEco/X3/$dir/*.patch
+	git apply -v $rootdirectory/device/LeEco/X3/patches_vk/$dir/*.patch
+done
+
+# -----------------------------------
+echo -e "Done !\n"
+cd $rootdirectory

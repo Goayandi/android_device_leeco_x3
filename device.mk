@@ -317,6 +317,7 @@ PRODUCT_PACKAGES += libprotobuf-cpp-full
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/manifest.xml:vendor/manifest.xml
     $(LOCAL_PATH)/compatibility_matrix.xml:vendor/compatibility_matrix.xml
+
 # Fingerprint Sensor
 PRODUCT_PACKAGES += \
     fingerprintd \

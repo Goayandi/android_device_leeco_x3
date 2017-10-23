@@ -16,13 +16,13 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-3072-hwui
 $(call inherit-product, device/common/gps/gps_us_supl.mk) 
 
 # Vendor
-$(call inherit-product, vendor/LeEco/X3/X3-vendor-blobs.mk)
+$(call inherit-product, vendor/leeco/x3/x3-vendor-blobs.mk)
 
 # Overlay Folder
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Folder path
-LOCAL_PATH := device/LeEco/X3
+LOCAL_PATH := device/leeco/x3
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal xxhdpi

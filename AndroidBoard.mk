@@ -1,5 +1,5 @@
 KERNEL_DEFCONFIG := x500_defconfig
-KERNEL_DIR := kernel/LeEco/X3
+KERNEL_DIR := kernel/leeco/x3
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 

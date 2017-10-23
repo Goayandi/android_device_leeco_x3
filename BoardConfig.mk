@@ -1,6 +1,6 @@
--include vendor/LeEco/X3/BoardConfigVendor.mk
+-include vendor/leeco/x3/BoardConfigVendor.mk
 
-LOCAL_PATH := device/LeEco/X3
+LOCAL_PATH := device/leeco/x3
 
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
@@ -75,7 +75,7 @@ BOARD_MKBOOTIMG_ARGS := \
 	--board MT6795
 
 #source
-TARGET_KERNEL_SOURCE := kernel/LeEco/X3
+TARGET_KERNEL_SOURCE := kernel/leeco/x3
 TARGET_KERNEL_CONFIG := x500_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
@@ -117,7 +117,7 @@ BOARD_CONNECTIVITY_VENDOR := MediaTek
 USE_XML_AUDIO_POLICY_CONF := 1
 
 # RIL
-BOARD_RIL_CLASS := ../../../device/LeEco/X3/ril
+BOARD_RIL_CLASS := ../../../device/leeco/x3/ril
 BOARD_CONNECTIVITY_MODULE := conn_soc
 
 # Display
@@ -213,7 +213,7 @@ BOARD_SECCOMP_POLICY := \
        
 # SELinux
 BOARD_SEPOLICY_DIRS := \
-    device/LeEco/X3/sepolicy
+    device/leeco/x3/sepolicy
 
 # Legacy blobs
 TARGET_NEEDS_TEXT_RELOCATIONS := true 
@@ -239,7 +239,7 @@ MALLOC_SVELTE := true
 BOARD_GLOBAL_CFLAGS += -DDECAY_TIME_DEFAULT=0
 #BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 #Hack for prebuilt kernel
-ifeq ($(TARGET_DEVICE),X3)
+ifeq ($(TARGET_DEVICE),x3)
 $(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
 $(shell touch $(OUT)/obj/KERNEL_OBJ/usr/export_includes)
 endif

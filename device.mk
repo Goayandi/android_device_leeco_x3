@@ -6,10 +6,10 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-3072-dalv
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-3072-hwui-memory.mk)
 
 # Vendor
-$(call inherit-product, vendor/leeco/x3/x3-vendor-blobs.mk)
+$(call inherit-product, vendor/LeEco/X3-vendor-blobs.mk)
 
 # Folder path
-LOCAL_PATH := device/leeco/x3
+LOCAL_PATH := device/LeEco/X3
 
 # Overlay Folder
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay

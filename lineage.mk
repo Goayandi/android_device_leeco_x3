@@ -9,7 +9,8 @@ $(call inherit-product, device/LeEco/X3/full_X3.mk)
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit mtk configuration
-$(call inherit-product, device/LeEco/X3/ProjectConfig.mk)
+include device/LeEco/X3/ProjectConfig.mk
+include vendor/mediatek/Android.mk
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := X3

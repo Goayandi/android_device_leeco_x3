@@ -6,7 +6,7 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-3072-dalv
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-3072-hwui-memory.mk)
 
 # Vendor
-$(call inherit-product, vendor/LeEco/X3-vendor-blobs.mk)
+$(call inherit-product, vendor/LeEco/X3/X3-vendor-blobs.mk)
 
 # Folder path
 LOCAL_PATH := device/LeEco/X3

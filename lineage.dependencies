@@ -1,0 +1,8 @@
+[
+  {
+    "remote": "github",
+    "repository": "vishalk17/mtk_vendor_mt6795",
+    "target_path": "vendor/mediatek",
+    "branch": "master"
+  }
+] 

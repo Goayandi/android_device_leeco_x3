@@ -255,3 +255,16 @@ endif
 #ro.com.android.dataroaming=false \
 #net.tethering.noprovisioning=true \
 #ro.setupwizard.rotation_locked=true
+
+#mtk
+MTK_PATH_PLATFORM := vendor/mediatek/proprietary
+MTK_PATH_SOURCE := vendor/mediatek/proprietary
+MTK_PATH_CUSTOM := vendor/mediatek/proprietary/custom/mt6795
+MTK_PATH_CUSTOM_PLATFORM := vendor/mediatek/proprietary/custom/mt6795
+MTK_PATH_COMMON := vendor/mediatek/proprietary/custom/common
+MTK_ROOT := vendor/mediatek/proprietary
+MTK_EMULATOR_SUPPORT := yes
+MTK_USE_ANDROID_MM_DEFAULT_CODE := yes
+MTK_WVDRM_L1_SUPPORT := yes
+TARGET_BUILD_PDK := true
+BUILD_TINY_ANDROID : true

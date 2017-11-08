@@ -459,3 +459,7 @@ PRODUCT_PACKAGES += \
     libbacktrace.vndk-sp\
     libunwind.vndk-sp\
     liblzma.vndk-sp
+
+PRODUCT_PACKAGES += \
+    PerformanceControl \
+    Stk
